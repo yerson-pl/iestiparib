@@ -1,0 +1,57 @@
+body {
+}
+
+.header {
+	background-image: url(img/Marzo1.png);
+	background-size: cover;
+	min-height: 500px;
+}
+
+.img-logo {
+	width: 20px;
+}
+
+.vh-50 {
+	height: 100vmin;
+}
+
+.bg-succes {
+	background: red;
+}
+.card-img-filter {
+	filter: brightness(0.5);
+}
+
+
+.card {
+	transition-duration: .6s;
+	
+
+}
+..card-effects:hover .card {
+	clip-path: polygon(
+		50% 0,
+		50% 0,
+		100% 50%,
+		100% 50%,
+		50% 100%,
+		50% 100%,
+		0 50%,
+		0 50%,
+		 );
+}
+.card-img-overlay{
+	transition-duration: 0.6s;
+}
+
+.card-effects:hover .card-img-overlay{
+	transform: scale(0.9);
+}
+
+.bg-overlay {
+	background: rgba(114, 17, 36,.7);
+}
+
+.f-space {
+	margin: 400 0 0 0;
+}

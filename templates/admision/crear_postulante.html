@@ -1,0 +1,23 @@
+<div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="modal-title">
+                <button class="close" type="buttons" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="action" method="POST">
+                {% csrf_token %}
+                <div class="modal-body">
+                    {{postulante_form}}
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit">
+                        registrarse
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

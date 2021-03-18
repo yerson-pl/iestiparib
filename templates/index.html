@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<section class="container pt-4 mt-4 ">
+	
+	<div class="row">
+		<div class="col-12 text-center">
+			<h2 class="text-warning text-uppercase">Constancia de estudio MINEDU</h2><br>	
+		</div>
+		<article class="col-4 card-effects">
+			<div class="card bg-overlay" >
+				<iframe width="677" height="381" src="https://www.youtube.com/embed/3pw6MlOY9CQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+	</div>
+		</article><br><br>
+	</div>
+</section>
+
+<section class="col-6 card-effects">
+  <article>
+    <div id="registro" >
+      <img src="{% static 'img/minedu.png' %}" alt="" style="width: 150px;">
+      <h2 class="text-uppecarse">Registro de Postulantes</h2>
+      <hr><hr>
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{postulante_form | crispy}}
+    
+        <input class="btn btn-primary" type="submit" value="Registrar">
+    </div>
+  </article >
+  
+</section><br><br><br><br>
+
+<footer class="bg-dark text-white">
+  <div class="container" id="contactos">
+    <nav class="row">
+      <!-- Logo -->
+      <a href="#" class="col-3 tet-reset text-uppercase d-flex align-items-center">
+        <img src="{% static 'img/logoweb.jpg' %}" alt="">
+      </a>
+    <!-- Moquegua -->
+    <ul class="col-3 list-unstyled">
+      <li class="text-reset">MOQUEGUA</li>
+       
+      <li class="mt-4"> <a href="https://api.whatsapp.com/send?phone=+51952631365" class="text-reset">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png" width="50" height="50" alt="Watshap">Cel.952631365</a>
+     </li>
+    </ul>
+    <ul class="col-3 list-unstyled">
+      <li class="text-reset">PUNO</li>
+       
+      <li class="mt-4"> <a href="https://api.whatsapp.com/send?phone=+51951621203" class="text-reset">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png" width="50" height="50" alt="Watshap">Cel.951621203</a>
+      </li>
+      <li> <a href="https://api.whatsapp.com/send?phone=+51956510155" class="text-reset">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png" width="50" height="50" alt="Watshap">Cel.956510155</a>
+      </li>
+    </ul>
+    <ul class="col-3 list-unstyled">
+      <li class="text-reset">AREQUIPA</li>
+       
+      <li class="mt-4"> <a href="https://api.whatsapp.com/send?phone=+51959034971" class="text-reset">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png" width="50" height="50" alt="Watshap">Cel.959034971</a>
+      </li>
+      <li> <a href="https://api.whatsapp.com/send?phone=+51958918010" class="text-reset">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png" width="50" height="50" alt="Watshap">Cel.958918010</a>
+      </li>
+    </ul>
+    </nav>
+  </div>
+  <hr>
+  <div class="row d-flex align-items-center">
+    <span > © IESTPARIB 2021</span>
+  </div>
+</footer>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{postulante_form | crispy}}
+    
+        <input type="submit" value="Registrar"> -->
+      </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extrajs %}
+
+{% endblock  %}
